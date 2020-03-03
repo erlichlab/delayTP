@@ -16,8 +16,8 @@ The data folder contains anonymized choice data from our subjects.
 
 ## media
 
-The media contains movies demonstrating the tasks.
+The media folder contains movies demonstrating the tasks.
 
 ## figs
 
-An empty directory. If you run the src/analysis/master.m script it will put figures in this folder.
+The figures folder contains high quality PDFs of the individual delay discounting fits and the individual timing figures (Figure S1 and Figure S2, respectively). Also, if you run the src/analysis/master.m script it will put figures in this folder.
