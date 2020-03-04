@@ -3,7 +3,7 @@
 Our study on relationship between timing and discounting
 
 To cite this work: Lukinova, E., & Erlich, J. C. Association of the altered sense of time in the seconds-to-minute range with intertemporal choices across time-horizons 
-(in prep, following pre-registration at OSF: https://osf.io/vaqf8). PsyArXiv DOI: 10.31234/osf.io/ut5ms
+(in prep, following pre-registration at OSF: https://osf.io/vaqf8, available at PsyArXiv https://psyarxiv.com/ut5ms).
 
 ## src
 
