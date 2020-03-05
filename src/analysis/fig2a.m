@@ -1,7 +1,7 @@
 function fig2a()
 load('../../data/delaytp.mat');
 % prepare data
-followup_a = table2array(followup(:,:)); 
+followup_a = table2array(followup(:,:)); % followup group
 fs_idx = find(strcmpi(followup.Properties.VariableNames,'SV'));
 fse_idx = find(strcmpi(followup.Properties.VariableNames,'SVsd'));
 fl_idx = find(strcmpi(followup.Properties.VariableNames,'LV'));
@@ -12,7 +12,7 @@ fs(:,3) = fs(:,2);
 fl(:,1) = followup_a(:,fl_idx);
 fl(:,2) = followup_a(:,fle_idx);
 fl(:,3) = fl(:,2);
-new_a = table2array(new(:,:)); 
+new_a = table2array(new(:,:)); % new group
 ns_idx = find(strcmpi(new.Properties.VariableNames,'SV'));
 nse_idx = find(strcmpi(new.Properties.VariableNames,'SVsd'));
 nl_idx = find(strcmpi(new.Properties.VariableNames,'LV'));

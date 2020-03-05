@@ -11,11 +11,9 @@ fig2a()
 %% Fig 3 D-F
 fig3df()
 
-%% Fig 4 A,B
-fig4ab()
-
-%% Fig 4 D,E
-fig4de()
+%% Fig 4 A,B,D,E
+fig4abde()
 
 %% Fig 4 C,F
+% Uncomment options for Fig 4 in function distributionplots.m
 fig4cf()
