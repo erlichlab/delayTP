@@ -1,0 +1,48 @@
+---
+title: "master"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Delay TP main figures
+
+This is a master script for the main figures in R.
+
+```{r delaytp}
+# load follow-up
+
+# load new
+
+# load new posterior
+load('~/repos/delaytp/data/new_posterior.RData')
+```
+
+## Fig. 2b
+
+```{r fig2b, echo=FALSE}
+source("fig2bsource.R")
+fig2b(new_posterior)
+```
+
+## Fig. 2c
+
+```{r fig2c, echo=FALSE}
+plot(pressure)
+```
+
+## Fig. 3ac
+
+```{r fig3ac, echo=FALSE}
+plot(pressure)
+```
+
+## Fig. 5ad
+
+```{r fig5ad, echo=FALSE}
+source("fig5source.R")
+fig5(followup)
+fig5(naive)
+```
