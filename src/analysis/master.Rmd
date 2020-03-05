@@ -12,9 +12,13 @@ knitr::opts_chunk$set(echo = TRUE)
 This is a master script for the main figures in R.
 
 ```{r delaytp}
-# load follow-up
+# load follow-up and new group fits and data
 
-# load new
+# load raw tpdata
+timing <- read.csv(file = "~/repos/delaytp/data/timing_trials.csv")
+tetp = subset(timing,te == 1)
+tptp = subset(timing,te == 0)
+# load 
 
 # load new posterior
 load('~/repos/delaytp/data/new_posterior.RData')
@@ -36,7 +40,8 @@ plot(pressure)
 ## Fig. 3ac
 
 ```{r fig3ac, echo=FALSE}
-plot(pressure)
+source("fig3source.R")
+fig3(tetp,tptp,subj_te,subj_tp)
 ```
 
 ## Fig. 5ad
@@ -44,5 +49,5 @@ plot(pressure)
 ```{r fig5ad, echo=FALSE}
 source("fig5source.R")
 fig5(followup)
-fig5(naive)
+fig5(new)
 ```

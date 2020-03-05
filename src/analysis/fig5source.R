@@ -30,8 +30,9 @@ plot_it2 = function(dropmod, labs){
 }
 
 fig5 = function(tpdata){
-  modSF = lm(K_S ~ K_L + ICSe + ICSp + ICSErr, data=tpdata)
-  modLF = lm(K_L ~ K_S + ICSe + ICSp + ICSErr, data=tpdata)
+  tpdata1 = subset(tpdata,MTpRatio<2); # define the group without the outlier
+  modSF = lm(K_S ~ K_L + ICSe + ICSp + ICSErr, data=tpdata1)
+  modLF = lm(K_L ~ K_S + ICSe + ICSp + ICSErr, data=tpdata1)
   
   dropSF = as.data.frame(drop1(modSF, test = 'Chisq'))
   dropLF = as.data.frame(drop1(modLF, test = 'Chisq'))
