@@ -9,6 +9,7 @@ This folder contains
 File            		| Description
 -----           		|------------
 delaytp.mat			| fits and timing data for main figures
+timing_trials.csv  | raw timing data
 all_trials.RData | trials from the main experiment in an R dataframe
 drop1.RData | data for the 'drop1' analysis
 posterior_delaytp.mat | results from [brms](https://github.com/paul-buerkner/brms) fits
