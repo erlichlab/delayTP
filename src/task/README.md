@@ -39,8 +39,8 @@
 
 **Run the following code:**
 
-    1. For [subjects with odd subid] verbal blocks -> run verbal_combined_odd.py
-    2. For [subjects with even subid] verbal blocks -> run verbal_combined_even.py
+    1. For [subjects with odd subjid] verbal blocks -> run verbal_combined_odd.py
+    2. For [subjects with even subjid] verbal blocks -> run verbal_combined_even.py
 
 **Auxiliary files catalog**
     
