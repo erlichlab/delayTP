@@ -1,8 +1,7 @@
 library(ggplot2)
 library(data.table)
 # selected subjects
-#subjids <- c(43, 6, 13)
-subjids <- c(428, 42, 75)
+subjids <- c(43, 6, 13)
 # power and linear fits for the individual timing
 plot_subject_tep = function(sind,tetp,tptp,subj_te,subj_tp){
   te = tetp %>% filter(subjid == subjids[sind])
@@ -29,7 +28,7 @@ plot_subject_tep = function(sind,tetp,tptp,subj_te,subj_tp){
     ylim(0,90) + #125
     labs(y='Reported Time', x='Actual Time') +
     theme(text = element_text(size=20)) #15
-  #ggsave(paste0('~/repos/delaytp/fig/','Fig3',substr(abc, sind, sind),'.pdf'),plot=p, units = 'in', width=4, height =3) #width=3, height =4
+  #ggsave(paste0('../../fig/','Fig3',substr(abc, sind, sind),'.pdf'),plot=p, units = 'in', width=4, height =3) #width=3, height =4
   return(p)
 }
 
