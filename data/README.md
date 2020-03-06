@@ -8,8 +8,13 @@ This folder contains
 
 File            		| Description
 -----           		|------------
+all_trials_naivetp.RData | intertemporal choice trials for the new group in an R dataframe
+delaytp.RData         | fits and timing data for main figures
 delaytp.mat			| fits and timing data for main figures
+dfsubj.RData         | example subject fitted draws
+new_posterior.RData  | posteriors for the new group
+real_r2.RData       | Bayesian r2
 timing_trials.csv  | raw timing data
-all_trials.RData | trials from the main experiment in an R dataframe
+
 drop1.RData | data for the 'drop1' analysis
 posterior_delaytp.mat | results from [brms](https://github.com/paul-buerkner/brms) fits
