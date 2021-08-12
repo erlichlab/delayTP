@@ -8,7 +8,7 @@ require(car)
 require(lmtest)
 require(GGally)
 require(cowplot)
-#require(joshelutils)
+library(stargazer)
 
 library(dplyr)
 
@@ -44,4 +44,22 @@ fig5 = function(tpdata){
   
   p12 = plot_grid(p1,p2, align="v", ncol=3)
   return(p12)
+}
+table2S = function(tpdata){
+  tpdata1 = subset(tpdata,MTpRatio<2); # define the group without the outlier
+  modSF = lm(K_S ~ K_L + ICSe + ICSp + ICSErr, data=tpdata1)
+  modSF1 = lm(K_S ~ K_L, data=tpdata1)
+  modSF2 = lm(K_S ~ K_L + ICSe, data=tpdata1)
+
+  #tS <- stargazer(modSF, modSF1, title="K_S Regression Results", align=TRUE, dep.var.labels=c("Log(k_{SV})"), covariate.labels=c("Log(k_{LV})","ICSe","ICSp","ICSErr"), no.space=TRUE)
+  tS <- stargazer(modSF, modSF1, modSF2, title="K_S Regression Results", align=TRUE, dep.var.labels=c("Log(k_{SV})"), covariate.labels=c("Log(k_{LV})","ICSe","ICSp","ICSErr"), no.space=TRUE)
+  return(tS)
+}
+table2L = function(tpdata){
+  tpdata1 = subset(tpdata,MTpRatio<2); # define the group without the outlier
+  modLF = lm(K_L ~ K_S + ICSe + ICSp + ICSErr, data=tpdata1)
+  modLF1 = lm(K_L ~ K_S, data=tpdata1)
+  
+  tL <- stargazer(modLF, modLF1, title="K_L Regression Results", align=TRUE, dep.var.labels=c("Log(k_{LV})"), covariate.labels=c("Log(k_{SV})","ICSe","ICSp","ICSErr"), no.space=TRUE)
+  return(tL)
 }
