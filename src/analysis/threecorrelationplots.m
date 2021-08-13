@@ -2,7 +2,7 @@ function threecorrelationplots(x1,x2,x3,x4,t1,t2,t3,t4)
 % x1, x2, x3, x4 are inputs for the 3 subplots
 % t1, t2, t3, t4 are their labels
 figure;clf;
-cl = summer(10);
+cl = copper(10);
 subplot(1,3,1);
 scatter(x2,x1,20,cl(5,:),'filled');
 xlabel(t2);
