@@ -45,8 +45,22 @@ fig2c(naive_trials,newgr,nv_r2)
 ## Fig. 3ac
 
 ```{r fig3ac, echo=FALSE}
-source("fig3source.R")
-fig3(tetp,tptp,subj_te,subj_tp)
+source("fig3acsource.R")
+fig3ac(tetp,tptp,subj_te,subj_tp)
+```
+
+## Fig. 3d
+
+```{r fig3d, echo=FALSE}
+source("fig3dsource.R")
+fig3d(timing)
+```
+
+## Fig. 3e
+
+```{r fig3e, echo=FALSE}
+source("fig3esource.R")
+fig3e(timing)
 ```
 
 ## Fig. 5ad
