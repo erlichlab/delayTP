@@ -55,4 +55,8 @@ fig3(tetp,tptp,subj_te,subj_tp)
 source("fig5source.R")
 fig5(followup)
 fig5(newgr)
+table2S(followup)
+table2L(followup)
+table2S(newgr)
+table2L(newgr)
 ```
